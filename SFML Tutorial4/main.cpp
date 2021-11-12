@@ -1,4 +1,4 @@
-#include "Paddle.h"
+#include "Paddles.h"
 #include "Ball.h"
 
 
@@ -17,8 +17,8 @@ int main()
     
 
     // Init P1 & P2 Paddle
-    Paddle p1(xCord1, sf::Keyboard::W, sf::Keyboard::S);
-    Paddle p2(xCord2, sf::Keyboard::Up, sf::Keyboard::Down);
+    Paddles p1(xCord1, sf::Keyboard::W, sf::Keyboard::S);
+    Paddles p2(xCord2, sf::Keyboard::Up, sf::Keyboard::Down);
     
     // Init Ball 
     Ball ball(xpos);
@@ -35,8 +35,28 @@ int main()
 
     while (window.isOpen())
     {
+        // Paddle Movement
+        p1.updatePosition();
+        p2.updatePosition();
+
+        // Ball Movement 
 
 
+
+        // Collisions 
+
+
+
+
+
+
+
+
+
+
+
+
+        // Close window 
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -44,8 +64,9 @@ int main()
                 window.close();
         }
         
-        window.clear();
 
+        // Draw to screen
+        window.clear();
         window.draw(ball.getBall());
         window.draw(p1.getPaddle());
         window.draw(p2.getPaddle());
