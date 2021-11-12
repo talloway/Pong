@@ -5,6 +5,7 @@ Paddles::Paddles(int xpos, sf::Keyboard::Key up, sf::Keyboard::Key down)
 	//Position
 	this->xpos = xpos;
 	ypos = 200;
+	speedMod = .5;
 
 
 	//Up & Down control
@@ -16,7 +17,6 @@ Paddles::Paddles(int xpos, sf::Keyboard::Key up, sf::Keyboard::Key down)
 	paddle.setFillColor(sf::Color::White);
 
 	//Speed modifier 
-	speedMod = .5;
 
 }
 
@@ -42,7 +42,6 @@ void Paddles::updatePosition()
 	{
 		setPos(1 * speedMod);
 	}
-
 
 }
 

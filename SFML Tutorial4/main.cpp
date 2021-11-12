@@ -21,7 +21,7 @@ int main()
     Paddles p2(xCord2, sf::Keyboard::Up, sf::Keyboard::Down);
     
     // Init Ball 
-    Ball ball(xpos);
+    Ball ball;
   
 
 
@@ -40,6 +40,8 @@ int main()
         p2.updatePosition();
 
         // Ball Movement 
+
+        ball.updatePosition();
 
 
 
